@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    background: #10101B;
+    background: #434360;
     height: 100vh;
 }
 .container {
@@ -11,7 +11,7 @@ body {
 
 .half-width {
     height: 570px;
-    background: #222436;
+    background: #9ea4d5;
     padding: 30px;
     text-align: center;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 input[type='text']{
-    background-color: #3D4153;
+    background-color: #141516a7;
     padding: 10px 0px;
     color: #ffffff;
     width: 80%;
@@ -43,7 +43,7 @@ input[type='text']{
     padding: 10px;
 }
 input[type='text']:focus {
-    background-color: #3D4153;
+    background-color: #0e0e0e;
     color: #fff;
     font-size: 20px;
 }
@@ -86,6 +86,7 @@ color: #E0B612;
     border-radius: 5px;
     background: #495BC3;
     color: #fff;
+    font-weight: 700;
 }
 .notify {
     color: #fff;
@@ -101,6 +102,7 @@ color: #E0B612;
     margin: 0 auto;
 }
 .action-left {
-    color: #FF3C5F;
+    color: #9c263b;
     margin-top: 10px;
+    font-weight: 700;
 }
