@@ -6,7 +6,7 @@ function getPin(){
         return pin;
     }
     else{
-        console.log('3 digit')
+     
         return getPin();
     }
 }
@@ -21,4 +21,60 @@ document.getElementById('generate-pin').addEventListener('click',function(){
     const pin = getPin();
     const displayPinField = document.getElementById('display-pin');
     displayPinField.value = pin;
+    
+})
+
+document.getElementById('calculator').addEventListener('click',function(event){
+  const number =  event.target.innerText;
+  const typedNumberField = document.getElementById('typed-numbers');
+  const previousTypedNumber =typedNumberField.value;
+  if(isNaN(number)){
+    if(number === 'C'){
+      typedNumberField.value='';
+    }
+    else if(number === '<'){
+        const digits = previousTypedNumber.split('');
+        digits.pop();
+        const remainingDigits =digits.join('');
+        typedNumberField.value=remainingDigits;
+    }
+  }
+  else{
+   
+ 
+    const newTypedNumber = previousTypedNumber + number;
+    typedNumberField.value = newTypedNumber;
+  }
+
+})
+
+document.getElementById('verify-pin').addEventListener('click',function(){
+    const displayPinField =document.getElementById('display-pin');
+    const displayPin = displayPinField.value;
+    const typedNumberField =document.getElementById('typed-numbers');
+    const typedNumber = typedNumberField.value;
+
+    const pinSuccessMessage = document.getElementById('pin-success');
+    const pinFailureMessage =document.getElementById('pin-failure');
+
+    if(typedNumber === displayPin){
+        pinSuccessMessage.style.display='block';
+        pinFailureMessage.style.display='none';
+       
+
+    }
+    else{
+        pinFailureMessage.style.display='block';
+        pinSuccessMessage.style.display='none';
+       
+
+    }
+})
+
+document.getElementById('verify-pin').addEventListener('click',function(){
+    const inputField1 = document.getElementById('display-pin');
+    const inputField2 = document.getElementById('typed-numbers');
+       // Clear the values of the input fields
+       inputField1.value = '';
+       inputField2.value = '';
 })
